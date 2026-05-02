@@ -5,8 +5,7 @@ const path = require('path');
 const routes = require('./routes');
 
 const app = express();
-const PORT = 5000;
-
+const PORT = process.env.PORT;
 // ─── Middleware ───────────────────────────────────────────────────────────────
 app.use(cors({
   origin: '*', // Allow all origins for dev; restrict in production
