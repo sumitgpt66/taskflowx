@@ -5,7 +5,7 @@ const path = require('path');
 const routes = require('./routes');
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 // ─── Middleware ───────────────────────────────────────────────────────────────
 app.use(cors({
   origin: '*', // Allow all origins for dev; restrict in production
@@ -60,7 +60,7 @@ app.listen(PORT, () => {
   console.log('╔════════════════════════════════════════╗');
   console.log('║      🚀 TaskFlowX Server Started        ║');
   console.log('╠════════════════════════════════════════╣');
-  console.log(`║  URL:  http://127.0.0.1:${PORT}           ║`);
+  console.log(`║  URL: {PORT}           ║`);
   console.log(`║  ENV:  development                      ║`);
   console.log('╚════════════════════════════════════════╝');
   console.log('');
